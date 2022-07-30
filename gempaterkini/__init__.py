@@ -2,6 +2,7 @@
 Aplikasi Gempa Terkini dari BMKG
 Modularisasi Fungtion
 """
+import requests
 from bs4 import BeautifulSoup
 
 
@@ -15,9 +16,11 @@ def ekstraksi_data():
     Pusat gempa berada di laut 171 km barat Sanana
     Dirasakan (Skala MMI): II - III Taliabu
     """
+    content = requests.get('https://www.bmkg.go.id')
+    print(content.status_code)
+    #soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
+    #print(soup.prettify())
 
-    soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
-    print(soup.prettify())
     hasil = dict()
     hasil['tanggal'] ='27 Juli 2022'
     hasil['waktu'] = '14: 22:29 wib'
