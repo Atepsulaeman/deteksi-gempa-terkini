@@ -21,12 +21,19 @@ def ekstraksi_data():
           return None
     if content.status_code == 200:
           soup = BeautifulSoup(content.text, 'html.parser')
-          tanggal = soup.find('span', {'class': 'waktu'})
+
+          result = soup.find('span', {'class': 'waktu'})
+          result =result.text.split(', ')
+          tanggal = result[0]
+          waktu = result[1]
+
+          result
+          #magnitudo =0belum
 
 
           hasil = dict()
-          hasil['tanggal'] = tanggal.text #'27 Juli 2022'
-          hasil['waktu'] = '14: 22:29 wib'
+          hasil['tanggal'] = tanggal #'27 Juli 2022'
+          hasil['waktu'] = waktu #'14: 22:29 wib'
           hasil['magnitudo'] =4.2
           hasil['kedalaman'] = 10.0
           hasil['lokasi'] = {'ls': 2.04, 'bt' : - 124.45}
