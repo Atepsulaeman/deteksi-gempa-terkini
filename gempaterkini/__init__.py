@@ -20,12 +20,12 @@ def ekstraksi_data():
     except Exception:
           return None
     if content.status_code == 200:
-          print(content.text)
-          #soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
-          #print(soup.prettify())
+          soup = BeautifulSoup(content.text, 'html.parser')
+          tanggal = soup.find('span', {'class': 'waktu'})
+
 
           hasil = dict()
-          hasil['tanggal'] ='27 Juli 2022'
+          hasil['tanggal'] = tanggal.text #'27 Juli 2022'
           hasil['waktu'] = '14: 22:29 wib'
           hasil['magnitudo'] =4.2
           hasil['kedalaman'] = 10.0
