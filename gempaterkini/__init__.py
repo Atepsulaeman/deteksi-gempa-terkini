@@ -37,3 +37,4 @@ def tampilkan_data(result):
     print(f"Pusat {result['pusat']}")
     print(f"Dirasakan {result['dirasakan']}")
 
+
