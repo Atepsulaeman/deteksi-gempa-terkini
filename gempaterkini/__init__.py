@@ -27,7 +27,11 @@ def ekstraksi_data():
           tanggal = result[0]
           waktu = result[1]
 
-          result
+          result = soup.find('div', {'class': 'col-md-6 col-xs-6 gempabumi-detail no-padding'})
+          result = soup.findChildren('li')
+          print(result)
+
+
           #magnitudo =0belum
 
 
