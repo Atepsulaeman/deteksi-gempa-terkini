@@ -1,4 +1,4 @@
-#atep
+#atep Sulaeman
 from gempaterkini import ekstraksi_data, tampilkan_data
 
 
