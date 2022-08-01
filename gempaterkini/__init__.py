@@ -80,6 +80,6 @@ def tampilkan_data(result):
 
 #if__name__ =='__main__':
   #  print('ini adalah package gempa terkini')
-   # print('hai')
+   # print('hai atep ')
 
 
